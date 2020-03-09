@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabar</title>
+</head>
+<script src="js/jquery.js"></script>
+<!--<script src="js/navbar.js"></script>-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        if($("button").text()=="||"){
+            //$("li").fadeIn("slow");
+            $("button").text("X");
+        }else{
+            //$("li").fadeOut("slow");
+            $("button").text("||");
+        }
+        $("li").toggle("slow");
+    });
+});
+</script>
+<style>
+    nav li{
+        list-style-type: none;
+        margin:0 2vw;
+        font-size: 3vh;
+        align-items: flex-end;
+        align-self:center;
+        
+    }
+    
+    nav a{
+        text-decoration: none;
+        color :black;
+        padding:2vw;
+        font-family: monospace;
+        transition-duration: 0.5s;
+    }
+    nav a:hover{
+        /*background-color: #d1d855;*/
+        font-size: 120%;
+        color: aliceblue;
+        
+    }
+    @media only screen and (max-width:200px){
+        nav ul{
+            flex-direction: column;
+            
+        }
+        nav li{
+            margin:0;
+            align-self: center;
+            
+        }
+        nav a{
+            display:block;
+        }
+        nav button{
+            display:block !important;
+            padding:2vw;
+            font-size: 3vh;
+            background-color: #796c9f;
+            border:none;
+            outline:none;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+      
+    }
+    nav{
+        width:100vw;
+        height:10vh;
+        background-color:#796c9f;
+        display: block;
+    }
+    nav ul{
+        margin:0;
+        padding:0;
+        display:flex;
+    }
+    
+    body{
+        margin:0;
+    }
+    nav button{
+        display: none;
+        cursor: pointer;
+    }
+    .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<body>
+    <nav >
+        <ul style="background-color: #796c9f;">
+            <button> X </button>
+            <li class="menu-item"><a href="#home" class="active"><span>Home</span></a></li>
+            <li class="menu-item"><a href="#about"><span >About</span></a></li>
+            <li class="menu-item"><a href="#schedule"><span >Schedule</span></a></li>
+            <li class="menu-item"><a href="#gallery"><span >Gallery</span></a></li>
+        </ul>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <a href="archive/2018/index.html" >Visit Summer School 2018</a>
+                    <a href="archive/2019/index.html" >Visit Summer School 2019</a>
+                    <a href="https://drive.google.com/open?id=0B8LGHrEPRIxdMGl6amwxd21Kc0U" >Download Report (2017)</a>
+                    <a href="https://drive.google.com/file/d/0B8LGHrEPRIxdYlBkVVdUNUlIUWs/view" >Download Report (2016)</a>
+                    <a href="https://bhaveywadhwa.wordpress.com/2019/06/16/summer-camp-2019/">Blog by a volunteer</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Dropdown 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div> 
+    </nav>
+    
+</body>
+</html>

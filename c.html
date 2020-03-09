@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #796c9f;
+  height:10vh;
+  
+}
+@media (max-width: 600px) {
+    .navbar{
+        display:none; 
+    }
+}
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:nth-child(1){
+    float: left;
+}
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  /*background-color: #d1d855;*/
+  /*(font-size: 120%;*/
+  transition: 0.5s;
+  border-bottom: 3px black solid;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #796c9f;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  /*background-color: #ddd;*/
+  border-left: 3px black solid;
+  border-bottom:none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <a>summer-camp-2020</a>
+
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#gallery">Gallery</a>
+  <div class="dropdown">
+    <button class="dropbtn">More
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="archive/2018/index.html" >Visit Summer School 2018</a>
+        <a href="archive/2019/index.html" >Visit Summer School 2019</a>
+        <a href="https://drive.google.com/open?id=0B8LGHrEPRIxdMGl6amwxd21Kc0U" >Download Report (2017)</a>
+        <a href="https://drive.google.com/file/d/0B8LGHrEPRIxdYlBkVVdUNUlIUWs/view" >Download Report (2016)</a>
+        <a href="https://bhaveywadhwa.wordpress.com/2019/06/16/summer-camp-2019/">Blog by a volunteer</a>
+    </div>
+  </div> 
+</div>
+
+</body>
+</html>
